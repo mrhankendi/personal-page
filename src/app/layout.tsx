@@ -81,7 +81,7 @@ export default function RootLayout({
           </div>
           <footer className="mt-12 border-t border-(--border) py-6">
             <div className="text-sm text-(--muted-text)">
-              © {new Date().getFullYear()} Your Name — Built with Next.js + Tailwind
+              © {new Date().getFullYear()} Can Hankendi — Built with Next.js + Tailwind
             </div>
           </footer>
         </div>

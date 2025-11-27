@@ -1,7 +1,9 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
 import { getProfile, type Profile } from "@/lib/content";
+
+// With custom domain (root deploy) avatar is simply at /avatar.jpg
+const avatarPath = '/avatar.jpg';
 
 export default function Sidebar() {
   const p: Profile = getProfile();
@@ -11,7 +13,7 @@ export default function Sidebar() {
         {/* Avatar */}
         <div className="flex flex-col items-center text-center">
           <img
-            src="/avatar.jpg"
+            src={avatarPath}
             alt={`${p.name} avatar`}
             width={160}
             height={160}
@@ -103,23 +105,7 @@ export default function Sidebar() {
         </div>
       )}
 
-      {/* <nav className="mt-6">
-  <h3 className="text-sm font-medium uppercase tracking-wide text-(--muted-text)">Navigation</h3>
-        <ul className="mt-2 space-y-1 text-sm">
-          {[
-            { href: "/", label: "Home" },
-            { href: "/cv", label: "CV" },
-            { href: "/publications", label: "Publications" },
-            { href: "/talks", label: "Talks" },
-            { href: "/teaching", label: "Teaching" },
-            { href: "/blog", label: "Blog" },
-          ].map((item) => (
-            <li key={item.href}>
-              <Link className="hover:underline" href={item.href}>{item.label}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav> */}
+      {/* Navigation omitted intentionally; main nav pills handle routing */}
     </aside>
   );
 }
