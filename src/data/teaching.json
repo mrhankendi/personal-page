@@ -1,0 +1,14 @@
+[
+  {
+    "term": "Fall 2025",
+    "course": "CS 123: Intro to XYZ",
+    "role": "Instructor",
+    "link": "#"
+  },
+  {
+    "term": "Spring 2025",
+    "course": "CS 456: Advanced ABC",
+    "role": "Co-instructor",
+    "link": "#"
+  }
+]

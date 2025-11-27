@@ -1,0 +1,13 @@
+{
+  "name": "Can Hankendi",
+  "title": "Researcher at Boston University",
+  "email": "you@example.com",
+  "location": "City, Country",
+  "bio": "I am a researcher working on X, Y, and Z. My work spans ABC and DEF, with a focus on practical applications.",
+  "social": {
+    "github": "https://github.com/yourname",
+    "twitter": "https://twitter.com/yourhandle",
+    "scholar": "https://scholar.google.com",
+    "linkedin": "https://www.linkedin.com/in/yourname/"
+  }
+}

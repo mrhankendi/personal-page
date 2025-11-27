@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "hello-world",
+    "title": "Hello, world",
+    "date": "2025-11-12",
+    "summary": "Kicking off the new academic site.",
+    "content": "# Hello, world\n\nThis is a sample post to show how blog pages look.\n\n- Fast navigation\n- Simple content pipeline\n- JSON-backed posts for now"
+  },
+  {
+    "slug": "paper-notes-xyz",
+    "title": "Paper Notes: XYZ",
+    "date": "2025-10-01",
+    "summary": "Notes on recent XYZ paper.",
+    "content": "Some quick notes on XYZ paper and thoughts."
+  }
+]

@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Prevent layout shift when vertical scrollbar appears/disappears */
+html {
+  /* Reserve scrollbar space across pages (fallback) */
+  overflow-y: scroll;
+  /* Modern, nicer behavior where supported */
+  scrollbar-gutter: stable both-edges;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Centralized typography and color tokens */
+:root {
+  /* Typography base */
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-feature-settings: "cv02","cv03","cv04","cv11"; /* Inter stylistic adjustments */
+  font-variation-settings: normal;
+
+  /* shell (light) */
+  --surface: #ffffff;
+  --surface-muted: #f8fafc; /* slate-50 */
+  --text: #0f172a; /* slate-900 */
+  --muted-text: #334155; /* slate-700 for better readability */
+  --border: #e2e8f0; /* slate-200 */
+
+  /* accents */
+  --link: #1d4ed8; /* blue-700 */
+  --accent: #7c3aed; /* violet-600 */
+  --accent-foreground: #ffffff;
+  --ring: #93c5fd; /* blue-300 */
+
+  color-scheme: light;
+
+  /* Typescale (fluid) */
+  --scale--1: clamp(0.85rem, 0.83rem + 0.1vw, 0.9rem);
+  --scale-0: 1rem;
+  --scale-1: clamp(1.15rem, 1.08rem + 0.4vw, 1.3rem);
+  --scale-2: clamp(1.35rem, 1.23rem + 0.6vw, 1.6rem);
+  --scale-3: clamp(1.7rem, 1.55rem + 0.8vw, 2.1rem);
+  --scale-4: clamp(2.1rem, 1.9rem + 1.2vw, 2.6rem);
 }
+
+.dark {
+  /* shell (dark) */
+  --surface: #0b1220; /* blue-tinted deep */
+  --surface-muted: #111827; /* slate-900 */
+  --text: #e6edf3; /* github-dark text */
+  --muted-text: #94a3b8; /* slate-400 */
+  --border: #1f2937; /* slate-800-ish */
+
+  /* accents */
+  --link: #a78bfa; /* violet-400 */
+  --accent: #8b5cf6; /* violet-500 */
+  --accent-foreground: #0b1220;
+  --ring: #475569; /* slate-600 */
+
+  color-scheme: dark;
+}
+
+/* Global anchors default to link color; navigation overrides will control their own */
+a {
+  color: var(--link);
+}
+
+/* Header navigation link colors and hover */
+/* Main nav uses pill buttons; inherit color and let utilities control bg/text */
+.main-nav a { color: var(--text); text-decoration: none; }
+.main-nav a:hover { text-decoration: none; }
+
+/* Accessible focus outlines */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Headings use a display font for a more distinctive look */
+:where(h1,h2,h3) {
+  font-family: var(--font-display), var(--font-inter), ui-sans-serif, system-ui;
+  letter-spacing: -0.01em;
+}
+
+/* Utility to apply display font where headings aren't used (e.g., brand) */
+.font-display {
+  font-family: var(--font-display), var(--font-inter), ui-sans-serif, system-ui;
+  letter-spacing: -0.01em;
+}
+
+/* Fine-tune paragraph rhythm */
+body, :where(p, li) {
+  line-height: 1.55;
+}
+
+/* Headings: size + tighter line-height combined (avoid duplicate selectors) */
+h1 { font-size: var(--scale-4); line-height: 1.15; }
+h2 { font-size: var(--scale-3); line-height: 1.2; }
+h3 { font-size: var(--scale-2); line-height: 1.25; }
+

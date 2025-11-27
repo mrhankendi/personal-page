@@ -1,0 +1,18 @@
+[
+  {
+    "id": "talk-2025-keynote",
+    "title": "Keynote: The Future of XYZ",
+    "event": "TechConf 2025",
+    "date": "2025-06-10",
+    "location": "Berlin, Germany",
+    "link": "#"
+  },
+  {
+    "id": "talk-2024-seminar",
+    "title": "Seminar: Practical ABC",
+    "event": "CS Dept Seminar",
+    "date": "2024-10-21",
+    "location": "Online",
+    "link": "#"
+  }
+]

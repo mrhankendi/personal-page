@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Academic Pages (Next.js + Tailwind)
 
-## Getting Started
+A fast, SPA-style academic website inspired by https://academicpages.github.io, built with Next.js App Router and Tailwind CSS. No full-page reloads when navigating between sections.
 
-First, run the development server:
+### What’s included
+- Routes: Home, CV, Publications, Talks, Teaching, Blog, and dynamic Blog posts
+- Shared sticky navbar and footer
+- Content seeded via JSON in `src/data/`
+- Simple content loader in `src/lib/content.ts`
 
-```bash
+## Try it locally (Windows PowerShell)
+
+```powershell
+# From the project folder
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Build production assets:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```powershell
+npm run build; npm start
+```
 
-## Learn More
+## Customize content
+- Edit `src/data/profile.json` for your name, bio, email, links
+- Add/edit items in:
+	- `src/data/publications.json`
+	- `src/data/talks.json`
+	- `src/data/teaching.json`
+	- `src/data/posts.json` (supports a simple `content` string; you can switch to MDX later)
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
+- `src/app/layout.tsx` — Site chrome (navbar + footer)
+- `src/app/*/page.tsx` — Pages for Home, CV, Publications, Talks, Teaching, Blog
+- `src/app/blog/[slug]/page.tsx` — Dynamic post page
+- `src/lib/content.ts` — Content types and JSON loaders
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Next steps
+- Replace placeholder text with your information
+- Add a PDF CV and link it from the CV page
+- If you want rich blog formatting, consider switching to MDX
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
