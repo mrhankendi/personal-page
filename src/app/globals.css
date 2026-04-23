@@ -21,17 +21,20 @@ html {
   font-variation-settings: normal;
 
   /* shell (light) */
-  --surface: #ffffff;
-  --surface-muted: #f8fafc; /* slate-50 */
-  --text: #0f172a; /* slate-900 */
-  --muted-text: #334155; /* slate-700 for better readability */
-  --border: #e2e8f0; /* slate-200 */
+  --surface: #fcfcfa;
+  --surface-raised: #ffffff;
+  --surface-muted: #f4f4ef;
+  --text: #142033;
+  --muted-text: #42526b;
+  --border: #d8dee8;
+  --border-soft: #e6ebf2;
+  --border-strong: #aeb9c9;
 
   /* accents */
-  --link: #1d4ed8; /* blue-700 */
-  --accent: #7c3aed; /* violet-600 */
+  --link: #184e9e;
+  --accent: #184e9e;
   --accent-foreground: #ffffff;
-  --ring: #93c5fd; /* blue-300 */
+  --ring: #7aa4de;
 
   color-scheme: light;
 
@@ -46,17 +49,20 @@ html {
 
 .dark {
   /* shell (dark) */
-  --surface: #0b1220; /* blue-tinted deep */
-  --surface-muted: #111827; /* slate-900 */
-  --text: #e6edf3; /* github-dark text */
-  --muted-text: #94a3b8; /* slate-400 */
-  --border: #1f2937; /* slate-800-ish */
+  --surface: #0f1722;
+  --surface-raised: #111c2a;
+  --surface-muted: #162235;
+  --text: #edf2f8;
+  --muted-text: #a8b5c7;
+  --border: #223146;
+  --border-soft: #24384f;
+  --border-strong: #5d718d;
 
   /* accents */
-  --link: #a78bfa; /* violet-400 */
-  --accent: #8b5cf6; /* violet-500 */
-  --accent-foreground: #0b1220;
-  --ring: #475569; /* slate-600 */
+  --link: #9dc0f2;
+  --accent: #9dc0f2;
+  --accent-foreground: #0f1722;
+  --ring: #8eb3e6;
 
   color-scheme: dark;
 }
@@ -64,6 +70,7 @@ html {
 /* Global anchors default to link color; navigation overrides will control their own */
 a {
   color: var(--link);
+  text-underline-offset: 0.2em;
 }
 
 /* Header navigation link colors and hover */
@@ -94,8 +101,13 @@ body, :where(p, li) {
   line-height: 1.55;
 }
 
+body {
+  background:
+    radial-gradient(circle at top, rgba(24, 78, 158, 0.05), transparent 32%),
+    var(--surface);
+}
+
 /* Headings: size + tighter line-height combined (avoid duplicate selectors) */
 h1 { font-size: var(--scale-4); line-height: 1.15; }
 h2 { font-size: var(--scale-3); line-height: 1.2; }
 h3 { font-size: var(--scale-2); line-height: 1.25; }
-

@@ -14,6 +14,13 @@ export type Publication = {
   venue?: string;
   year?: number;
   link?: string;
+  pdf?: string;
+  preprint?: string;
+  doi?: string;
+  code?: string;
+  type?: "journal" | "conference" | "workshop" | "dissertation" | "patent";
+  summary?: string;
+  selected?: boolean;
   tags?: string[];
 };
 
@@ -47,6 +54,16 @@ export type Profile = {
   email?: string;
   location?: string;
   bio?: string;
+  bioEmphasis?: string;
+  researchSummary?: string;
+  researchInterests?: string[];
+  links?: {
+    cv?: string;
+    googleScholar?: string;
+    orcid?: string;
+    dblp?: string;
+    semanticScholar?: string;
+  };
   social?: Record<string, string>;
 };
 

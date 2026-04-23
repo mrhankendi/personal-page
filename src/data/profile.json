@@ -1,13 +1,28 @@
 {
   "name": "Can Hankendi",
-  "title": "Researcher at Boston University",
+  "title": "Postdoctoral Researcher, Boston University",
   "email": "last_name@gmail.com",
   "location": "San Diego, CA",
-  "bio": "Postdoctoral Associate at Boston University specializing in sustainable and carbon-aware computing, as well as energy-efficient management of compute platforms.",
+  "bio": "I study sustainable and carbon-aware computing systems, with a focus on making large-scale AI infrastructure power-aware, grid-interactive, and operationally transparent.",
+  "bioEmphasis": "power-aware, grid-interactive",
+  "researchSummary": "My research sits at the intersection of computer systems, energy systems, and climate-aligned infrastructure. I build methods for making large-scale compute more power-aware, grid-interactive, and operationally transparent.",
+  "researchInterests": [
+    "Sustainable Computing",
+    "AI Infrastructure",
+    "Demand Response",
+    "Carbon-Aware Systems",
+    "Data Center Control"
+  ],
+  "links": {
+    "cv": "/cv",
+    "googleScholar": "https://scholar.google.com/citations?user=lBClDlcAAAAJ&hl=en",
+    "orcid": "https://orcid.org/",
+    "dblp": "https://dblp.org/",
+    "semanticScholar": "https://www.semanticscholar.org/"
+  },
   "social": {
     "github": "https://github.com/mrhankendi",
-    "twitter": "https://twitter.com/yourhandle",
-    "scholar": "https://scholar.google.com/citations?user=lBClDlcAAAAJ&hl=en",
-    "linkedin": "https://www.linkedin.com/in/hankendi/"
+    "linkedin": "https://www.linkedin.com/in/hankendi/",
+    "scholar": "https://scholar.google.com/citations?user=lBClDlcAAAAJ&hl=en"
   }
 }

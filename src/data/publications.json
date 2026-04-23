@@ -1,20 +1,237 @@
 [
   {
-    "id": "pub-2025-01",
-    "title": "A Next-Generation Approach to XYZ",
-    "authors": "Your Name, Coauthor B",
-    "venue": "Conf on Something (CONF '25)",
-    "year": 2025,
-    "link": "#",
-    "tags": ["xyz", "ml"]
+    "id": "pub-2026-01",
+    "title": "Optimizing Workload Migration for Carbon and Cost Reductions Under Grid Constraints: New Insights and a Practical Evaluation Framework",
+    "authors": "Can Hankendi, Ayse K. Coskun",
+    "venue": "IEEE Energy Sustainability Magazine",
+    "year": 2026,
+    "type": "journal",
+    "selected": true,
+    "summary": "Introduces a practical evaluation framework for shifting AI workloads across sites while balancing grid constraints, carbon reductions, and operating cost.",
+    "tags": ["ai", "data-centers", "carbon", "workload-migration", "grid-interactive"]
   },
   {
-    "id": "pub-2024-02",
-    "title": "Efficient Methods for ABC",
-    "authors": "Your Name",
-    "venue": "Journal of ABC",
+    "id": "pub-2026-02",
+    "title": "Investigating Power Consumption Flexibility of AI Data Centers for Demand Response Participation",
+    "authors": "Fatih Acun, Can Hankendi, Ethan Levine, Hudson Reynolds, Joshua Bardwick, Ayse K. Coskun",
+    "venue": "ACM E-Energy",
+    "year": 2026,
+    "type": "conference",
+    "selected": true,
+    "summary": "Studies how AI data centers can expose flexible load to the grid and quantifies the operational tradeoffs of participating in demand response programs.",
+    "tags": ["ai", "data-centers", "demand-response", "power-systems", "grid-flexibility"]
+  },
+  {
+    "id": "pub-2025-01",
+    "title": "Why transparency matters for sustainable data centers and carbon-neutral artificial intelligence (AI)",
+    "authors": "Can Hankendi, Ayse K. Coskun, Benjamin K. Sovacool",
+    "venue": "iScience",
+    "year": 2025,
+    "type": "journal",
+    "selected": true,
+    "summary": "Argues that transparent reporting of workload, energy, and carbon metrics is essential for credible sustainability claims in AI infrastructure.",
+    "tags": ["ai", "sustainability", "data-centers", "carbon", "policy"]
+  },
+  {
+    "id": "pub-2025-02",
+    "title": "Lessons Learned from Anomaly Detection in Chameleon Cloud",
+    "authors": "S. M. Qasim, C. Hankendi, M. Sherman, K. Keahey, G. Stringhini, A. K. Coskun",
+    "venue": "2025 IEEE International Conference on Cloud Engineering (IC2E)",
+    "year": 2025,
+    "type": "conference",
+    "summary": "Distills operational lessons from deploying anomaly detection pipelines in a real cloud environment and highlights practical reliability challenges.",
+    "tags": ["cloud", "anomaly-detection", "systems", "operations"]
+  },
+  {
+    "id": "pub-2024-01",
+    "title": "Data center demand response for sustainable computing: Myth or opportunity?",
+    "authors": "Ayse K. Coskun, Fatih Acun, Quentin Clark, Can Hankendi, Daniel C. Wilson",
+    "venue": "Design, Automation & Test in Europe Conference & Exhibition (DATE)",
     "year": 2024,
-    "link": "#",
-    "tags": ["abc", "systems"]
+    "type": "conference",
+    "selected": true,
+    "summary": "Evaluates whether demand response can become a meaningful systems lever for sustainable data center operation rather than a niche grid service.",
+    "tags": ["data-centers", "demand-response", "sustainable-computing", "energy-systems"]
+  },
+  {
+    "id": "pub-2019-01",
+    "title": "Power management for heterogeneous computing systems",
+    "authors": "Can Hankendi, Manish Arora, Indrani Paul",
+    "venue": "US Patent 10,168,762",
+    "year": 2019,
+    "type": "patent",
+    "summary": "Describes mechanisms for coordinating power management policies across heterogeneous compute resources.",
+    "tags": ["patent", "power-management", "heterogeneous-computing"]
+  },
+  {
+    "id": "pub-2019-02",
+    "title": "Determining thermal time constants of processing systems",
+    "authors": "Can Hankendi, Manish Arora, Indrain Paul, Wei Huang, Srilatha Manne",
+    "venue": "US Patent 10,281,964",
+    "year": 2019,
+    "type": "patent",
+    "summary": "Presents techniques for characterizing thermal response behavior in processing systems to inform control and design decisions.",
+    "tags": ["patent", "thermal", "processors"]
+  },
+  {
+    "id": "pub-2017-01",
+    "title": "Scale & Cap: Scaling-Aware Resource Management for Consolidated Multi-threaded Applications",
+    "authors": "Can Hankendi, Ayse Kivilcim Coskun",
+    "venue": "ACM Transactions on Design Automation of Electronic Systems (TODAES)",
+    "year": 2017,
+    "type": "journal",
+    "selected": true,
+    "summary": "Proposes a scaling-aware runtime for resource allocation and power capping in consolidated multi-threaded workloads.",
+    "tags": ["resource-management", "multithreading", "systems", "power"]
+  },
+  {
+    "id": "pub-2016-01",
+    "title": "Adapt&Cap: Coordinating System and Application-level Adaptation for Power Constrained Systems",
+    "authors": "Can Hankendi, Henry Hoffmann, Ayse Coskun",
+    "venue": "IEEE Design and Test Magazine",
+    "year": 2016,
+    "type": "journal",
+    "summary": "Shows how coordinated adaptation across the OS and application stack improves behavior under strict power constraints.",
+    "tags": ["adaptation", "power", "runtime-systems"]
+  },
+  {
+    "id": "pub-2016-02",
+    "title": "Exploiting limited context streams",
+    "authors": "Manish Arora, Can Hankendi, Syed Ali R. Jafri, Andrew G. Kegel",
+    "venue": "US Patent App. 14/610,662",
+    "year": 2016,
+    "type": "patent",
+    "summary": "Explores architectural mechanisms for extracting additional value from constrained hardware context streams.",
+    "tags": ["patent", "processors", "architecture"]
+  },
+  {
+    "id": "pub-2015-01",
+    "title": "Adaptive runtime techniques for power and resource management on multi-core systems",
+    "authors": "Can Hankendi",
+    "venue": "Boston University",
+    "year": 2015,
+    "type": "dissertation",
+    "summary": "Dissertation on runtime techniques for jointly managing energy, performance, and shared resources on multicore systems.",
+    "tags": ["dissertation", "multi-core", "resource-management", "power"]
+  },
+  {
+    "id": "pub-2014-01",
+    "title": "Message passing-aware power management on many-core systems",
+    "authors": "Andrea Bartolini, Can Hankendi, Ayse Kivilcim Coskun, Luca Benini",
+    "venue": "Journal of Low Power Electronics (JOLPE)",
+    "year": 2014,
+    "type": "journal",
+    "summary": "Incorporates communication behavior into power management decisions for many-core systems.",
+    "tags": ["many-core", "power-management", "message-passing"]
+  },
+  {
+    "id": "pub-2014-02",
+    "title": "Adapt&Cap: A Framework for Unifying System and Application-level Adaptive Management",
+    "authors": "Can Hankendi, Henry Hoffmann, Ayse K. Coskun",
+    "venue": "Boston Area Architecture Workshop (BARC)",
+    "year": 2015,
+    "type": "workshop",
+    "summary": "Introduces an early framework for coordinating system and application adaptation under shared power constraints.",
+    "tags": ["adaptation", "power", "resource-management"]
+  },
+  {
+    "id": "pub-2013-01",
+    "title": "Autonomous Resource Sharing for Multi-Threaded Workloads in Virtualized Servers",
+    "authors": "Can Hankendi, Ayse K. Coskun",
+    "venue": "VMware Technical Journal",
+    "year": 2013,
+    "type": "journal",
+    "summary": "Examines autonomous resource sharing policies for improving performance efficiency in virtualized multi-threaded servers.",
+    "tags": ["virtualization", "resource-sharing", "multithreading"]
+  },
+  {
+    "id": "pub-2013-02",
+    "title": "vCap: Adaptive power capping for virtualized servers",
+    "authors": "Can Hankendi, Sherief Reda, Ayse K. Coskun",
+    "venue": "International Symposium on Low Power Electronics and Design (ISLPED)",
+    "year": 2013,
+    "type": "conference",
+    "summary": "Presents an adaptive power capping framework for virtualized servers that balances energy limits with workload needs.",
+    "tags": ["virtualization", "power-capping", "servers", "energy"]
+  },
+  {
+    "id": "pub-2013-03",
+    "title": "Energy-efficient server consolidation for multi-threaded applications in the cloud",
+    "authors": "Can Hankendi, Ayse K. Coskun",
+    "venue": "2013 International Green Computing Conference Proceedings (IGCC)",
+    "year": 2013,
+    "type": "conference",
+    "summary": "Studies consolidation strategies for cloud workloads with an emphasis on multi-threaded application behavior and energy efficiency.",
+    "tags": ["cloud", "server-consolidation", "energy"]
+  },
+  {
+    "id": "pub-2013-04",
+    "title": "Adaptive power and resource management techniques for multi-threaded workloads",
+    "authors": "Can Hankendi, Ayse K. Coskun",
+    "venue": "2013 IEEE International Symposium on Parallel & Distributed Processing Workshops and PhD Forum (IPDPSW)",
+    "year": 2013,
+    "type": "workshop",
+    "summary": "Surveys adaptive techniques for managing performance and power in multi-threaded workloads.",
+    "tags": ["multithreading", "resource-management", "power", "runtime-systems"]
+  },
+  {
+    "id": "pub-2013-05",
+    "title": "Dynamic server power capping for enabling data center participation in power markets",
+    "authors": "Hao Chen, Can Hankendi, Michael C. Caramanis, Ayse K. Coskun",
+    "venue": "2013 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)",
+    "year": 2013,
+    "type": "conference",
+    "summary": "Connects runtime server power control with electricity market participation for data center operators.",
+    "tags": ["data-centers", "power-capping", "power-markets"]
+  },
+  {
+    "id": "pub-2012-01",
+    "title": "Reducing the energy cost of computing through efficient co-scheduling of parallel workloads",
+    "authors": "Can Hankendi, Ayse K. Coskun",
+    "venue": "2012 Design, Automation & Test in Europe Conference & Exhibition (DATE)",
+    "year": 2012,
+    "type": "conference",
+    "summary": "Shows how co-scheduling can cut the energy cost of parallel workloads without sacrificing system throughput.",
+    "tags": ["parallel-computing", "co-scheduling", "energy", "systems"]
+  },
+  {
+    "id": "pub-2012-02",
+    "title": "Adaptive energy-efficient resource sharing for multi-threaded workloads in virtualized systems",
+    "authors": "Can Hankendi, A. Coskun",
+    "venue": "International Workshop on Computing in Heterogeneous, Autonomous' N' Goal-oriented Environments (DAC-CHANGE)",
+    "year": 2012,
+    "type": "workshop",
+    "summary": "Explores energy-aware resource sharing techniques for virtualized platforms running multi-threaded workloads.",
+    "tags": ["virtualization", "resource-sharing", "energy", "multithreading"]
+  },
+  {
+    "id": "pub-2011-01",
+    "title": "Software optimization for performance, energy, and thermal distribution: Initial case studies",
+    "authors": "Md Ashfaquzzaman Khan, Can Hankendi, Ayse Kivilcim Coskun, Martin C. Herbordt",
+    "venue": "2011 International Green Computing Conference and Workshops (IGCC)",
+    "year": 2011,
+    "type": "conference",
+    "summary": "Presents early case studies on jointly optimizing software for performance, energy use, and thermal behavior.",
+    "tags": ["software-optimization", "energy", "thermal", "performance"]
+  },
+  {
+    "id": "pub-2011-02",
+    "title": "Identifying the optimal energy-efficient operating points of parallel workloads",
+    "authors": "Ryan Cochran, Can Hankendi, Ayse Coskun, Sherief Reda",
+    "venue": "2011 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)",
+    "year": 2011,
+    "type": "conference",
+    "summary": "Identifies operating points that minimize energy for parallel workloads while accounting for system-level performance tradeoffs.",
+    "tags": ["parallel-computing", "energy-efficiency", "optimization", "multi-core"]
+  },
+  {
+    "id": "pub-2011-03",
+    "title": "Pack & cap: adaptive DVFS and thread packing under power caps",
+    "authors": "Ryan Cochran, Can Hankendi, Ayse K. Coskun, Sherief Reda",
+    "venue": "Proceedings of the 44th Annual IEEE/ACM International Symposium on Microarchitecture (MICRO)",
+    "year": 2011,
+    "type": "conference",
+    "summary": "Combines DVFS and thread packing to maintain performance efficiency under strict power caps.",
+    "tags": ["dvfs", "power-caps", "multithreading", "architecture"]
   }
 ]

@@ -13,7 +13,7 @@ export default function Home() {
         <p>
 I am a postdoctoral researcher at Boston University’s Department of Electrical & Computer Engineering, working with the Performance and Energy-Aware Computing Lab 
 (PEACLab) led by Prof. Ayşe Coşkun. My work centers on building sustainable, grid-interactive AI infrastructure by bridging computer systems, energy systems, and climate-aligned operational strategies. 
-I design data-center-scale frameworks, tools, and control mechanisms that make AI workloads power-aware, demand-responsive, and carbon-optimized—demonstrating that traditional, efficiency-agnostic approaches to AI and HPC computing are incompatible with rapidly growing AI demand, constrained energy availability, and net-zero carbon requirements. 
+I design data-center-scale frameworks, tools, and control mechanisms that make AI workloads power-aware, demand-responsive, and carbon-optimized, demonstrating that traditional, efficiency-agnostic approaches to AI and HPC computing are incompatible with rapidly growing AI demand, constrained energy availability, and net-zero carbon requirements. 
 
 To address this gap, I develop new abstractions, metrics, runtime controllers, and multi-data-center coordination mechanisms that embed sustainability as a first-class design principle in modern computing systems.        
 </p>
