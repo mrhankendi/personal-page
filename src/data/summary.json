@@ -1,0 +1,8 @@
+{
+  "tagline": "Building power-aware, grid-interactive AI infrastructure at the intersection of computer systems, energy, and climate.",
+  "paragraphs": [
+    "I am a postdoctoral researcher at **Boston University**, working with the **Performance and Energy-Aware Computing Lab (PEACLab)** under Prof. **Ayşe Coşkun**. My research focuses on **sustainable, grid-interactive AI infrastructure**: designing frameworks, runtime controllers, and data center demand response mechanisms that make large-scale compute **power-aware**, **demand-responsive**, and **carbon-optimized**.",
+    "The core problem I study is the mismatch between how AI infrastructure is operated and what the electric grid and climate require. AI compute demand is growing faster than grid capacity and clean energy availability, yet most data centers are still operated without meaningful grid awareness. I develop systems and methods that embed **sustainability and power efficiency as a first-class operational principle**: from workload migration under grid and carbon constraints, to demand response participation, to transparency in energy accounting.",
+    "Prior to academia, I spent nearly a decade as a power and thermal engineer at **AMD**, **Samsung**, and **Qualcomm**, building firmware, post-silicon measurement infrastructure, and runtime algorithms for mobile and server processors. I also founded **a fintech startup** that reached over **1M monthly visitors** before exiting in 2023. This combination of deep systems engineering and entrepreneurial experience shapes how I approach research: grounded in operational reality, focused on problems that matter at scale."
+  ]
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "type": "single",
+    "company": "Boston University",
+    "title": "Postdoctoral Researcher",
+    "startDate": "Jan 2024",
+    "endDate": "Present",
+    "duration": "2 yrs 4 mos",
+    "logo": "/logos/bu.png",
+    "description": [
+      "- Research on sustainable, carbon-aware AI infrastructure and data center energy efficiency.",
+      "- Designing frameworks for workload migration under grid and carbon constraints.",
+      "- Exploring data center participation in demand response programs."
+    ]
+  },
+  {
+    "type": "single",
+    "company": "Startup",
+    "title": "Founder",
+    "startDate": "Jul 2021",
+    "endDate": "Jun 2023",
+    "duration": "2 yrs",
+    "location": "San Diego, CA",
+    "logo": "/logos/startup.png",
+    "description": [
+      "Built one of the leading platforms focusing on Special Purpose Acquisition Companies.",
+      "- Full-stack development for finance-oriented SaaS products, including mobile apps, APIs and websites for investment firms and retail investors.",
+      "- Reached over 1M visitors/month at its peak, monetized via paid subscriptions and advertisements.",
+      "- Achieved 20K registered users within a year."
+    ]
+  },
+  {
+    "type": "single",
+    "company": "Qualcomm",
+    "title": "Staff Engineer",
+    "startDate": "Feb 2020",
+    "endDate": "Jun 2021",
+    "duration": "1 yr 5 mos",
+    "location": "San Diego, CA",
+    "logo": "/logos/qualcomm.png",
+    "description": [
+      "Post-silicon thermal/power correlation, algorithm validation and optimization via hands-on lab measurements.",
+      "- Evaluated and optimized thermal and current limit management algorithms across process corners using DAQs, T32, thermal chambers from tape-out to production.",
+      "- Responsible for signing off thermal requirements for various IPs, including CPU, GPU, NSP.",
+      "- Improved time-to-throttle and steady-state performance for GFX workloads via algorithm optimization.",
+      "- Built automation tools for fast and reliable power, performance and thermal profiling."
+    ]
+  },
+  {
+    "type": "single",
+    "company": "Samsung Austin Research & Development Center (SARC)",
+    "title": "Staff Engineer",
+    "startDate": "Apr 2018",
+    "endDate": "Jan 2020",
+    "duration": "1 yr 9 mos",
+    "location": "Austin, TX",
+    "logo": "/logos/samsung.png",
+    "description": [
+      "Responsible for power and performance optimizations for Samsung Galaxy S smart phones.",
+      "- Tuned and optimized Linux Energy-aware Scheduler (EAS) for Exynos-based Galaxy phones.",
+      "- Improved the workload responsiveness by 16% through optimizing boosting algorithms on Linux scheduler.",
+      "- Collaborated with RTL teams to define power and current control architecture for future products."
+    ]
+  },
+  {
+    "type": "grouped",
+    "company": "Advanced Micro Devices (AMD)",
+    "totalDuration": "5 yrs",
+    "logo": "/logos/amd.png",
+    "roles": [
+      {
+        "title": "Senior Design Engineer",
+        "startDate": "Oct 2016",
+        "endDate": "Apr 2018",
+        "duration": "1 yr 7 mos",
+        "location": "Austin, TX",
+        "description": [
+          "- Developed algorithms and implemented firmware prototypes for DVFS management across multiple IPs.",
+          "- Performed post-silicon measurements to identify power/performance trade-offs on multiple clock domains.",
+          "- Measured deep-sleep entry/exit latencies through firmware modifications, proposed improvements."
+        ]
+      },
+      {
+        "title": "Post-doc Researcher",
+        "startDate": "Nov 2015",
+        "endDate": "Oct 2016",
+        "duration": "1 yr",
+        "location": "Austin, TX",
+        "description": [
+          "- Developed software plugins for AMD processors to enable the use of Sandia National Laboratory's power management framework (PowerAPI) for HPC clusters."
+        ]
+      },
+      {
+        "title": "Co-op",
+        "startDate": "Jun 2013",
+        "endDate": "Sep 2014",
+        "duration": "1 yr 3 mos",
+        "location": "Sunnyvale, CA",
+        "description": [
+          "- Modified GEM5 simulator to export additional performance counters for block-level power modeling.",
+          "- Implemented block-level CPU and network power models and projections for exascale processors."
+        ]
+      }
+    ]
+  }
+]

@@ -26,8 +26,7 @@ const typeBorderClasses: Record<NonNullable<Publication["type"]>, string> = {
   patent: "border-l-rose-500/90 dark:border-l-rose-400/80",
 };
 
-// Light mode: outline only — bg-transparent! forces out any stale cached fill.
-// Dark mode: subtle dark tinted fill.
+// Light mode: outline only. Dark mode: subtle dark tinted fill.
 const typeBadgeClasses: Record<NonNullable<Publication["type"]>, string> = {
   journal:
     "bg-transparent! text-emerald-700 border-emerald-400/70 dark:bg-emerald-950/40! dark:text-emerald-300 dark:border-emerald-700/50",
@@ -108,12 +107,9 @@ function PrimaryActionLink({ href, children }: { href: string; children: ReactNo
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="inline-flex items-center justify-center gap-1 rounded-full bg-(--text) px-3.5 py-2 text-xs font-semibold text-(--surface) transition-all hover:-translate-y-0.5 hover:opacity-85"
+      className="inline-flex items-center justify-center gap-1 rounded-full border border-(--border) px-2.5 py-1.5 text-xs font-medium text-(--text) transition-all hover:-translate-y-0.5 hover:border-(--border-strong) hover:bg-(--surface-muted) sm:px-3 sm:py-2"
     >
       {children}
-      <svg viewBox="0 0 12 12" fill="currentColor" className="h-3 w-3 opacity-70" aria-hidden>
-        <path d="M3.5 1h5A1.5 1.5 0 0 1 10 2.5v5A1.5 1.5 0 0 1 8.5 9H7V7.5h1.5v-5h-5V4H2V2.5A1.5 1.5 0 0 1 3.5 1Zm-1 3h5A1.5 1.5 0 0 1 9 5.5v5A1.5 1.5 0 0 1 7.5 12h-5A1.5 1.5 0 0 1 1 10.5v-5A1.5 1.5 0 0 1 2.5 4Zm0 1.5v5h5v-5h-5Z" />
-      </svg>
     </a>
   );
 }
@@ -124,7 +120,7 @@ function ActionLink({ href, children }: { href: string; children: ReactNode }) {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="inline-flex items-center justify-center rounded-full border border-(--border) px-3 py-2 text-xs font-medium text-(--text) transition-all hover:-translate-y-0.5 hover:border-(--border-strong) hover:bg-(--surface-muted)"
+      className="inline-flex items-center justify-center rounded-full border border-(--border) px-2.5 py-1.5 text-xs font-medium text-(--text) transition-all hover:-translate-y-0.5 hover:border-(--border-strong) hover:bg-(--surface-muted) sm:px-3 sm:py-2"
     >
       {children}
     </a>
@@ -148,7 +144,7 @@ function ActionButton({
       onClick={onClick}
       aria-expanded={expanded}
       aria-controls={controls}
-      className="inline-flex items-center justify-center gap-1.5 rounded-full border border-(--border) px-3 py-2 text-xs font-medium text-(--text) transition-all hover:-translate-y-0.5 hover:border-(--border-strong) hover:bg-(--surface-muted)"
+      className="inline-flex items-center justify-center gap-1.5 rounded-full border border-(--border) px-2.5 py-1.5 text-xs font-medium text-(--text) transition-all hover:-translate-y-0.5 hover:border-(--border-strong) hover:bg-(--surface-muted) sm:px-3 sm:py-2"
     >
       {children}
       <svg
@@ -163,32 +159,25 @@ function ActionButton({
   );
 }
 
-export default function PublicationCard({ publication, highlightAuthor }: PublicationCardProps) {
-  const [showAbstract, setShowAbstract] = useState(false);
+export default function PublicationCard({ publication, highlightAuthor }: Readonly<PublicationCardProps>) {
   const [showBibtex, setShowBibtex] = useState(false);
-  const abstractId = useId();
   const bibtexId = useId();
 
   const borderClass = publication.type
     ? typeBorderClasses[publication.type]
     : "border-l-(--border)";
 
-  function toggleAbstract() {
-    setShowAbstract((v) => !v);
-    setShowBibtex(false);
-  }
-
   function toggleBibtex() {
     setShowBibtex((v) => !v);
-    setShowAbstract(false);
   }
 
   return (
     <article
-      className={`group rounded-[1.6rem] border border-(--border) border-l-4 bg-(--surface-raised) p-5 shadow-[0_12px_30px_rgba(15,23,42,0.04)] transition-all hover:shadow-[0_16px_36px_rgba(15,23,42,0.07)] sm:p-6 ${borderClass}`}
+      id={publication.id}
+      className={`group rounded-2xl border border-(--border) border-l-4 bg-(--surface-raised) p-3 shadow-[0_12px_30px_rgba(15,23,42,0.04)] transition-all hover:shadow-[0_16px_36px_rgba(15,23,42,0.07)] sm:rounded-[1.6rem] sm:p-5 ${borderClass}`}
     >
-      <div className="space-y-3.5">
-        {/* Type badge + year + selected marker */}
+      <div className="space-y-2 sm:space-y-2.5">
+        {/* Type badge + year */}
         <div className="flex flex-wrap items-center gap-x-2.5 gap-y-2">
           {publication.type ? (
             <span
@@ -198,35 +187,34 @@ export default function PublicationCard({ publication, highlightAuthor }: Public
             </span>
           ) : null}
           {publication.year ? (
-            <span className="text-sm font-medium text-(--muted-text)">{publication.year}</span>
-          ) : null}
-          {publication.selected ? (
-            <span className="rounded-full border border-(--border) bg-(--surface-muted) px-2.5 py-0.5 text-xs font-medium text-(--muted-text)">
-              ★ Selected
-            </span>
+            <span className="text-xs font-medium text-(--muted-text) sm:text-sm">{publication.year}</span>
           ) : null}
         </div>
 
         {/* Title, venue, authors — venue sits between title and authors for prominence */}
-        <div className="space-y-1.5">
-          <h3 className="max-w-4xl text-[1rem]! leading-snug! font-semibold text-(--text) sm:text-[1.05rem]!">
-            {publication.title}
+        <div className="space-y-1">
+          <h3 className="max-w-4xl text-[0.9rem]! leading-snug! font-semibold text-(--text) sm:text-[1rem]!">
+            {publication.pdf ? (
+              <a href={publication.pdf} target="_blank" rel="noreferrer" className="text-(--text)! hover:underline decoration-1 underline-offset-2">
+                {publication.title}
+              </a>
+            ) : publication.title}
           </h3>
           {publication.venue ? (
-            <p className="text-sm font-medium text-(--muted-text)">{publication.venue}</p>
+            <p className="text-xs font-medium text-(--muted-text) sm:text-sm">{publication.venue}</p>
           ) : null}
-          <p className="text-sm leading-6 text-(--muted-text)">
+          <p className="text-xs leading-5 text-(--muted-text) sm:text-sm sm:leading-6">
             {formatAuthors(publication.authors, highlightAuthor)}
           </p>
         </div>
 
         {/* Tags — smaller, borderless pills to reduce visual noise */}
         {publication.tags?.length ? (
-          <ul className="flex flex-wrap gap-1.5" aria-label="Publication topics">
+          <ul className="hidden flex-wrap gap-1 sm:flex" aria-label="Publication topics">
             {publication.tags.map((tag) => (
               <li
                 key={tag}
-                className="rounded-full border border-(--border) bg-(--surface-muted) px-2.5 py-0.5 text-xs text-(--muted-text)"
+                className="rounded-full border border-(--border) bg-(--surface-muted) px-2 py-px text-[0.7rem] text-(--muted-text)"
               >
                 {tag}
               </li>
@@ -235,9 +223,9 @@ export default function PublicationCard({ publication, highlightAuthor }: Public
         ) : null}
 
         {/* Action row */}
-        <div className="flex flex-wrap gap-2 pt-0.5">
+        <div className="flex flex-wrap gap-1.5 pt-0.5 sm:gap-2">
           {publication.pdf ? (
-            <PrimaryActionLink href={publication.pdf}>PDF</PrimaryActionLink>
+            <PrimaryActionLink href={publication.pdf}><span className="text-red-600 dark:text-red-400">PDF</span></PrimaryActionLink>
           ) : null}
           {publication.preprint ? (
             <PrimaryActionLink href={publication.preprint}>Preprint</PrimaryActionLink>
@@ -245,28 +233,32 @@ export default function PublicationCard({ publication, highlightAuthor }: Public
           {publication.doi ? <ActionLink href={publication.doi}>DOI</ActionLink> : null}
           {publication.code ? <ActionLink href={publication.code}>Code</ActionLink> : null}
           {publication.summary ? (
-            <ActionButton onClick={toggleAbstract} expanded={showAbstract} controls={abstractId}>
-              Abstract
-            </ActionButton>
+            <details className="contents group/abstract">
+              <summary className="inline-flex cursor-pointer list-none items-center justify-center gap-1.5 rounded-full border border-(--border) px-2.5 py-1.5 text-xs font-medium text-(--text) transition-all hover:-translate-y-0.5 hover:border-(--border-strong) hover:bg-(--surface-muted) sm:px-3 sm:py-2 [&::-webkit-details-marker]:hidden">
+                Abstract
+                <svg
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  className="h-3 w-3 opacity-50 transition-transform duration-200 group-open/abstract:rotate-180"
+                  aria-hidden
+                >
+                  <path d="M8 10.94L2.53 5.47l1.06-1.06L8 8.82l4.41-4.41 1.06 1.06z" />
+                </svg>
+              </summary>
+              <p className="basis-full rounded-2xl border border-(--border) bg-(--surface-muted) px-3 py-2.5 text-xs leading-5 text-(--muted-text) sm:px-4 sm:py-3 sm:text-sm sm:leading-6">
+                {publication.summary}
+              </p>
+            </details>
           ) : null}
           <ActionButton onClick={toggleBibtex} expanded={showBibtex} controls={bibtexId}>
             BibTeX
           </ActionButton>
         </div>
 
-        {publication.summary && showAbstract ? (
-          <div
-            id={abstractId}
-            className="rounded-2xl border border-(--border) bg-(--surface-muted) px-4 py-3 text-sm leading-6 text-(--muted-text)"
-          >
-            {publication.summary}
-          </div>
-        ) : null}
-
         {showBibtex ? (
           <pre
             id={bibtexId}
-            className="overflow-x-auto rounded-2xl border border-(--border) bg-(--surface-muted) px-4 py-3 font-mono text-xs leading-6 text-(--muted-text)"
+            className="overflow-x-auto rounded-2xl border border-(--border) bg-(--surface-muted) px-3 py-2.5 font-mono text-[0.68rem] leading-5 text-(--muted-text) sm:px-4 sm:py-3 sm:text-xs sm:leading-6"
           >
             {buildBibtex(publication)}
           </pre>

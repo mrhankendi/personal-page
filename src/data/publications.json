@@ -6,8 +6,9 @@
     "venue": "IEEE Energy Sustainability Magazine",
     "year": 2026,
     "type": "journal",
+    "pdf": "/pdfs/2026_workload-migration-carbon-cost.pdf",
     "selected": true,
-    "summary": "Introduces a practical evaluation framework for shifting AI workloads across sites while balancing grid constraints, carbon reductions, and operating cost.",
+    "summary": "This paper examines workload migration as a practical lever for reducing both carbon emissions and operating cost in geographically distributed AI infrastructure. It frames migration decisions around the constraints that matter in real deployments: regional grid carbon intensity, electricity prices, site capacity, workload timing, and the operational limits of moving compute across locations. The contribution is an evaluation framework that helps compare when migration is beneficial, when grid or system constraints erase the expected gains, and how operators can reason about carbon-aware scheduling without treating the electric grid as an unlimited abstraction.",
     "tags": ["ai", "data-centers", "carbon", "workload-migration", "grid-interactive"]
   },
   {
@@ -17,8 +18,9 @@
     "venue": "ACM E-Energy",
     "year": 2026,
     "type": "conference",
+    "pdf": "/pdfs/2026_ai-data-centers-demand-response.pdf",
     "selected": true,
-    "summary": "Studies how AI data centers can expose flexible load to the grid and quantifies the operational tradeoffs of participating in demand response programs.",
+    "summary": "This work studies whether AI data centers can behave as flexible grid resources for demand response programs. It focuses on the gap between theoretical load flexibility and what is actually available once AI workload deadlines, performance targets, infrastructure constraints, and operational risk are considered. The paper investigates how much power consumption can be shifted or reduced, what kinds of workloads are better suited to participation, and how data center operators might expose flexibility to the grid while protecting service quality. The broader goal is to connect AI infrastructure operations with power-system needs in a way that is measurable and actionable.",
     "tags": ["ai", "data-centers", "demand-response", "power-systems", "grid-flexibility"]
   },
   {
@@ -29,7 +31,7 @@
     "year": 2025,
     "type": "journal",
     "selected": true,
-    "summary": "Argues that transparent reporting of workload, energy, and carbon metrics is essential for credible sustainability claims in AI infrastructure.",
+    "summary": "This article argues that credible sustainability claims for AI and data centers require much more transparent reporting of workload behavior, energy use, carbon accounting assumptions, and infrastructure boundaries. It highlights why aggregate or selectively reported metrics can obscure the real environmental cost of AI systems, especially when claims depend on offsets, renewable procurement, or incomplete accounting of compute demand. The paper connects technical measurement questions with policy and governance concerns, making the case that transparency is necessary for comparing systems, validating carbon-neutrality claims, and designing incentives that reward genuine reductions rather than accounting shortcuts.",
     "tags": ["ai", "sustainability", "data-centers", "carbon", "policy"]
   },
   {
@@ -39,7 +41,8 @@
     "venue": "2025 IEEE International Conference on Cloud Engineering (IC2E)",
     "year": 2025,
     "type": "conference",
-    "summary": "Distills operational lessons from deploying anomaly detection pipelines in a real cloud environment and highlights practical reliability challenges.",
+    "pdf": "/pdfs/2025_chameleon-cloud-anomaly-detection.pdf",
+    "summary": "This paper reports lessons from anomaly detection in Chameleon Cloud, emphasizing the realities of deploying detection methods in an operational research cloud rather than a controlled benchmark. It discusses the data quality, labeling, workload diversity, and infrastructure variability issues that shape anomaly detection performance in practice. The work is useful for understanding why cloud reliability tools need to account for changing usage patterns, noisy telemetry, and the difference between statistically unusual behavior and operationally meaningful incidents.",
     "tags": ["cloud", "anomaly-detection", "systems", "operations"]
   },
   {
@@ -49,8 +52,9 @@
     "venue": "Design, Automation & Test in Europe Conference & Exhibition (DATE)",
     "year": 2024,
     "type": "conference",
+    "pdf": "/pdfs/2024_data-center-demand-response.pdf",
     "selected": true,
-    "summary": "Evaluates whether demand response can become a meaningful systems lever for sustainable data center operation rather than a niche grid service.",
+    "summary": "This paper asks whether data center demand response is a real opportunity for sustainable computing or mostly a conceptual promise. It examines how data centers could adjust power consumption in response to grid needs, while accounting for workload constraints, service-level expectations, power delivery limits, and the economics of participation. The work positions demand response as a systems problem: useful grid flexibility depends not only on available electrical capacity, but also on scheduling policies, workload tolerance, market rules, and operator willingness to trade compute immediacy for energy-system value.",
     "tags": ["data-centers", "demand-response", "sustainable-computing", "energy-systems"]
   },
   {
@@ -58,9 +62,10 @@
     "title": "Power management for heterogeneous computing systems",
     "authors": "Can Hankendi, Manish Arora, Indrani Paul",
     "venue": "US Patent 10,168,762",
+    "pdf": "/pdfs/2019_power-management-heterogeneous-systems.pdf",
     "year": 2019,
     "type": "patent",
-    "summary": "Describes mechanisms for coordinating power management policies across heterogeneous compute resources.",
+    "summary": "This patent describes techniques for managing power across heterogeneous computing systems, where different processing resources may have different performance, energy, and thermal characteristics. The core idea is to coordinate power policies across those resources rather than treating each component independently. Such coordination can help a system choose where work should run, how aggressively components should be power-managed, and how to maintain performance while respecting platform-level power or thermal limits.",
     "tags": ["patent", "power-management", "heterogeneous-computing"]
   },
   {
@@ -68,9 +73,10 @@
     "title": "Determining thermal time constants of processing systems",
     "authors": "Can Hankendi, Manish Arora, Indrain Paul, Wei Huang, Srilatha Manne",
     "venue": "US Patent 10,281,964",
+    "pdf": "/pdfs/2019_thermal-time-constants.pdf",
     "year": 2019,
     "type": "patent",
-    "summary": "Presents techniques for characterizing thermal response behavior in processing systems to inform control and design decisions.",
+    "summary": "This patent focuses on determining thermal time constants in processing systems, which describe how quickly hardware heats up or cools down in response to workload and control changes. Accurately characterizing these dynamics is important for thermal management because a controller must know whether a temperature rise is transient, persistent, or likely to violate limits. The techniques support better power, cooling, and reliability decisions by giving the system a more precise model of its thermal response.",
     "tags": ["patent", "thermal", "processors"]
   },
   {
@@ -80,8 +86,9 @@
     "venue": "ACM Transactions on Design Automation of Electronic Systems (TODAES)",
     "year": 2017,
     "type": "journal",
+    "pdf": "/pdfs/2017_scale-and-cap.pdf",
     "selected": true,
-    "summary": "Proposes a scaling-aware runtime for resource allocation and power capping in consolidated multi-threaded workloads.",
+    "summary": "Scale & Cap addresses resource management for consolidated multi-threaded applications, where multiple workloads share a server and compete for cores, power, and other resources. The paper observes that applications do not scale uniformly as resources change, so effective management must understand each workload's scaling behavior rather than relying on fixed allocations. It proposes a runtime approach that coordinates resource allocation and power capping to improve performance efficiency under consolidation, helping systems decide which applications benefit from more resources and where power limits can be applied with less performance loss.",
     "tags": ["resource-management", "multithreading", "systems", "power"]
   },
   {
@@ -91,7 +98,8 @@
     "venue": "IEEE Design and Test Magazine",
     "year": 2016,
     "type": "journal",
-    "summary": "Shows how coordinated adaptation across the OS and application stack improves behavior under strict power constraints.",
+    "pdf": "/pdfs/2016_adapt-and-cap.pdf",
+    "summary": "Adapt&Cap explores how systems can coordinate application-level adaptation with operating-system or platform-level power management. Instead of relying only on hardware controls such as frequency scaling, the work considers applications that can change their own behavior, quality level, or resource demand when power is constrained. The paper shows how combining these adaptation layers can produce better outcomes than managing them separately, especially when the system must stay within a strict power cap while preserving as much useful application progress as possible.",
     "tags": ["adaptation", "power", "runtime-systems"]
   },
   {
@@ -101,7 +109,8 @@
     "venue": "US Patent App. 14/610,662",
     "year": 2016,
     "type": "patent",
-    "summary": "Explores architectural mechanisms for extracting additional value from constrained hardware context streams.",
+    "pdf": "/pdfs/2016_limited-context-streams.pdf",
+    "summary": "This patent application concerns limited context streams, where hardware or software components expose only constrained information about execution context. The work explores ways to use those limited streams more effectively, so a system can still infer useful behavior or make better management decisions despite restricted observability. The ideas are relevant to processor architecture and runtime control, where lightweight context information can support optimization without requiring expensive full-system monitoring.",
     "tags": ["patent", "processors", "architecture"]
   },
   {
@@ -111,7 +120,8 @@
     "venue": "Boston University",
     "year": 2015,
     "type": "dissertation",
-    "summary": "Dissertation on runtime techniques for jointly managing energy, performance, and shared resources on multicore systems.",
+    "pdf": "/pdfs/2015_adaptive-runtime-techniques.pdf",
+    "summary": "This dissertation develops adaptive runtime techniques for managing energy, performance, and shared resources in multicore systems. It brings together several themes: power capping, resource allocation, workload consolidation, and application-aware control. The central problem is that multicore platforms must make management decisions under changing workload behavior, shared-resource contention, and energy or thermal limits. The dissertation investigates runtime mechanisms that observe application behavior and adapt policies dynamically, aiming to improve efficiency without relying on static assumptions about how workloads scale.",
     "tags": ["dissertation", "multi-core", "resource-management", "power"]
   },
   {
@@ -121,7 +131,8 @@
     "venue": "Journal of Low Power Electronics (JOLPE)",
     "year": 2014,
     "type": "journal",
-    "summary": "Incorporates communication behavior into power management decisions for many-core systems.",
+    "pdf": "/pdfs/2014_message-passing-power-management.pdf",
+    "summary": "This paper studies power management for many-core systems running message-passing workloads. It recognizes that communication phases and synchronization behavior affect when cores are productively computing versus waiting, and that power policies can exploit this structure. By making power management aware of message-passing behavior, the system can reduce energy use during communication-heavy or idle periods while limiting the performance cost of aggressive control. The work connects parallel-program behavior with hardware-level power decisions.",
     "tags": ["many-core", "power-management", "message-passing"]
   },
   {
@@ -129,9 +140,10 @@
     "title": "Adapt&Cap: A Framework for Unifying System and Application-level Adaptive Management",
     "authors": "Can Hankendi, Henry Hoffmann, Ayse K. Coskun",
     "venue": "Boston Area Architecture Workshop (BARC)",
+    "pdf": "/pdfs/2015_adapt-and-cap-framework.pdf",
     "year": 2015,
     "type": "workshop",
-    "summary": "Introduces an early framework for coordinating system and application adaptation under shared power constraints.",
+    "summary": "This workshop paper introduces the Adapt&Cap framework, an early effort to unify system-level and application-level adaptation for power-constrained computing. The key idea is that applications often know how to trade quality, precision, or execution strategy for resource demand, while the operating system controls platform-level mechanisms such as allocation and power limits. Coordinating those layers creates a richer control space than either layer has alone, enabling more graceful behavior when power budgets are tight or changing.",
     "tags": ["adaptation", "power", "resource-management"]
   },
   {
@@ -141,7 +153,8 @@
     "venue": "VMware Technical Journal",
     "year": 2013,
     "type": "journal",
-    "summary": "Examines autonomous resource sharing policies for improving performance efficiency in virtualized multi-threaded servers.",
+    "pdf": "/pdfs/2013_autonomous-resource-sharing.pdf",
+    "summary": "This article examines autonomous resource sharing for multi-threaded workloads in virtualized servers. The paper focuses on how a server can allocate shared resources among co-running applications without relying on static partitioning or manual tuning. Because multi-threaded workloads differ in scalability and sensitivity to interference, the system needs policies that observe runtime behavior and adjust allocations accordingly. The work targets better performance efficiency in consolidated virtualized environments, where oversimplified resource sharing can waste energy or create avoidable slowdowns.",
     "tags": ["virtualization", "resource-sharing", "multithreading"]
   },
   {
@@ -151,7 +164,8 @@
     "venue": "International Symposium on Low Power Electronics and Design (ISLPED)",
     "year": 2013,
     "type": "conference",
-    "summary": "Presents an adaptive power capping framework for virtualized servers that balances energy limits with workload needs.",
+    "pdf": "/pdfs/2013_vcap-adaptive-power-capping.pdf",
+    "summary": "vCap presents adaptive power capping for virtualized servers, where multiple virtual machines or applications share a physical platform under a power budget. The paper addresses the challenge of enforcing caps while minimizing performance degradation for workloads with different resource needs and scaling behavior. It proposes runtime mechanisms that adjust power and resource decisions dynamically, allowing the system to respond to workload changes instead of applying a fixed cap uniformly. The work is part of a broader push toward energy-aware cloud and server management.",
     "tags": ["virtualization", "power-capping", "servers", "energy"]
   },
   {
@@ -161,7 +175,8 @@
     "venue": "2013 International Green Computing Conference Proceedings (IGCC)",
     "year": 2013,
     "type": "conference",
-    "summary": "Studies consolidation strategies for cloud workloads with an emphasis on multi-threaded application behavior and energy efficiency.",
+    "pdf": "/pdfs/2013_energy-efficient-server-consolidation.pdf",
+    "summary": "This paper studies energy-efficient server consolidation for multi-threaded cloud applications. It looks beyond simple utilization-based consolidation by considering how multi-threaded applications scale and interfere when placed together. The goal is to reduce the energy cost of running cloud workloads while preserving acceptable performance, which requires deciding when consolidation saves power and when it creates contention that offsets the benefit. The work contributes to runtime and placement strategies for making cloud infrastructure more energy proportional.",
     "tags": ["cloud", "server-consolidation", "energy"]
   },
   {
@@ -171,7 +186,8 @@
     "venue": "2013 IEEE International Symposium on Parallel & Distributed Processing Workshops and PhD Forum (IPDPSW)",
     "year": 2013,
     "type": "workshop",
-    "summary": "Surveys adaptive techniques for managing performance and power in multi-threaded workloads.",
+    "pdf": "/pdfs/2013_adaptive-power-resource-management.pdf",
+    "summary": "This workshop paper presents adaptive power and resource management techniques for multi-threaded workloads. It frames the core challenge as a moving target: workload phases, thread scalability, power limits, and shared-resource contention all change over time. The paper discusses how runtime systems can monitor behavior and adjust allocation or power policies dynamically, rather than assuming a single static operating point. It serves as a compact view of the research direction that later appears in more complete runtime-management systems.",
     "tags": ["multithreading", "resource-management", "power", "runtime-systems"]
   },
   {
@@ -181,7 +197,8 @@
     "venue": "2013 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)",
     "year": 2013,
     "type": "conference",
-    "summary": "Connects runtime server power control with electricity market participation for data center operators.",
+    "pdf": "/pdfs/2013_dynamic-server-power-capping.pdf",
+    "summary": "This paper connects server-level power capping with the possibility of data center participation in power markets. It studies how dynamic power control can make data centers more responsive to electricity prices or market signals, while still serving computational workloads. The work treats data centers as active energy-market participants rather than passive electricity consumers, requiring coordination between workload management, server power limits, and market-driven operating decisions. This theme anticipates later work on grid-interactive and demand-responsive computing infrastructure.",
     "tags": ["data-centers", "power-capping", "power-markets"]
   },
   {
@@ -191,17 +208,19 @@
     "venue": "2012 Design, Automation & Test in Europe Conference & Exhibition (DATE)",
     "year": 2012,
     "type": "conference",
-    "summary": "Shows how co-scheduling can cut the energy cost of parallel workloads without sacrificing system throughput.",
+    "pdf": "/pdfs/2012_parallel-workload-coscheduling.pdf",
+    "summary": "This paper investigates how co-scheduling parallel workloads can reduce the energy cost of computing. The central observation is that the energy efficiency of a workload depends on what else is running, how resources are shared, and whether the system is operating at an efficient point. By coordinating which parallel jobs run together, the system can improve utilization and reduce wasted energy while maintaining throughput. The work contributes scheduling techniques for energy-aware high-performance and server-class computing environments.",
     "tags": ["parallel-computing", "co-scheduling", "energy", "systems"]
   },
   {
     "id": "pub-2012-02",
     "title": "Adaptive energy-efficient resource sharing for multi-threaded workloads in virtualized systems",
     "authors": "Can Hankendi, A. Coskun",
+    "pdf": "/pdfs/2012_virtualized-resource-sharing.pdf",
     "venue": "International Workshop on Computing in Heterogeneous, Autonomous' N' Goal-oriented Environments (DAC-CHANGE)",
     "year": 2012,
     "type": "workshop",
-    "summary": "Explores energy-aware resource sharing techniques for virtualized platforms running multi-threaded workloads.",
+    "summary": "This workshop paper explores adaptive, energy-efficient resource sharing for virtualized systems running multi-threaded workloads. It focuses on the interaction between virtualization, workload scalability, and energy management: a resource allocation that looks fair or efficient in isolation may be wasteful once application behavior and interference are considered. The work studies how runtime policies can adjust shared resources to improve energy efficiency while preserving useful performance for co-located applications.",
     "tags": ["virtualization", "resource-sharing", "energy", "multithreading"]
   },
   {
@@ -211,7 +230,8 @@
     "venue": "2011 International Green Computing Conference and Workshops (IGCC)",
     "year": 2011,
     "type": "conference",
-    "summary": "Presents early case studies on jointly optimizing software for performance, energy use, and thermal behavior.",
+    "pdf": "/pdfs/2011_software-optimization-energy-thermal.pdf",
+    "summary": "This paper presents initial case studies on software optimization across performance, energy, and thermal distribution. Rather than treating energy or temperature as after-the-fact hardware concerns, it explores how software choices influence system-level behavior. The case studies help show that performance optimization alone may not produce the best energy or thermal outcomes, and that software can be tuned with multiple objectives in mind. The work is an early contribution to holistic optimization for green computing systems.",
     "tags": ["software-optimization", "energy", "thermal", "performance"]
   },
   {
@@ -221,7 +241,8 @@
     "venue": "2011 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)",
     "year": 2011,
     "type": "conference",
-    "summary": "Identifies operating points that minimize energy for parallel workloads while accounting for system-level performance tradeoffs.",
+    "pdf": "/pdfs/2011_energy-efficient-operating-points.pdf",
+    "summary": "This paper studies how to identify energy-efficient operating points for parallel workloads. It considers the tradeoff between running faster with more resources and running more efficiently at a lower-power point, recognizing that the best choice depends on workload scaling and system behavior. The work provides methods for locating operating points that reduce energy while maintaining useful performance, contributing to runtime and design-time strategies for energy-aware multicore and parallel computing systems.",
     "tags": ["parallel-computing", "energy-efficiency", "optimization", "multi-core"]
   },
   {
@@ -231,7 +252,8 @@
     "venue": "Proceedings of the 44th Annual IEEE/ACM International Symposium on Microarchitecture (MICRO)",
     "year": 2011,
     "type": "conference",
-    "summary": "Combines DVFS and thread packing to maintain performance efficiency under strict power caps.",
+    "pdf": "/pdfs/2011_pack-and-cap.pdf",
+    "summary": "Pack & Cap combines adaptive dynamic voltage and frequency scaling with thread packing for workloads operating under power caps. The paper addresses the problem that simply lowering frequency or uniformly limiting power can leave performance on the table. By coordinating where threads run and how cores are scaled, the system can better satisfy a power cap while preserving throughput. The work is significant for power-constrained multicore systems because it treats placement and frequency control as coupled decisions rather than independent knobs.",
     "tags": ["dvfs", "power-caps", "multithreading", "architecture"]
   }
 ]

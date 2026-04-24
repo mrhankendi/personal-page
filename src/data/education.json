@@ -1,0 +1,26 @@
+[
+  {
+    "school": "Boston University",
+    "degree": "Doctor of Philosophy (Ph.D.)",
+    "field": "Computer Engineering",
+    "startYear": 2010,
+    "endYear": 2015,
+    "logo": "/logos/bu.png"
+  },
+  {
+    "school": "University of Southern California",
+    "degree": "M.Sc",
+    "field": "Electrical Engineering",
+    "startYear": 2008,
+    "endYear": 2010,
+    "logo": "/logos/usc.png"
+  },
+  {
+    "school": "Sabanci University",
+    "degree": "BS",
+    "field": "Electrical Engineering",
+    "startYear": 2003,
+    "endYear": 2008,
+    "logo": "/logos/sabanci.png"
+  }
+]

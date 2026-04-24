@@ -4,7 +4,6 @@ import { useMemo, useState } from "react";
 import type { Profile, Publication } from "@/lib/content";
 import PublicationCard from "@/components/PublicationCard";
 import PublicationsFilterBar from "@/components/PublicationsFilterBar";
-import SectionHeader from "@/components/SectionHeader";
 
 type PublicationsExplorerProps = {
   publications: Publication[];
@@ -71,18 +70,9 @@ export default function PublicationsExplorer({
         return (left.year ?? 0) - (right.year ?? 0);
       }
 
-      if (sort === "selected") {
-        if (left.selected !== right.selected) {
-          return left.selected ? -1 : 1;
-        }
-        return (right.year ?? 0) - (left.year ?? 0);
-      }
-
       return (right.year ?? 0) - (left.year ?? 0);
     });
   }, [filteredPublications, sort]);
-
-  const selectedPublications = sortedPublications.filter((publication) => publication.selected);
 
   // Preserve sorted order while grouping by year for the archive view
   const yearGroups = useMemo(() => {
@@ -100,10 +90,10 @@ export default function PublicationsExplorer({
   }, [sortedPublications]);
 
   return (
-    <div className="space-y-8 lg:space-y-10">
-      <div className="space-y-4">
-        <h1 className="text-3xl font-semibold text-(--text) sm:text-4xl">Publications</h1>
-        <p className="max-w-3xl text-base leading-7 text-(--muted-text)">
+    <div className="space-y-5 sm:space-y-8 lg:space-y-10">
+      <div className="space-y-2 sm:space-y-4">
+        <h1 className="text-2xl font-semibold text-(--text) sm:text-4xl">Publications</h1>
+        <p className="hidden max-w-3xl text-base leading-7 text-(--muted-text) sm:block">
           {profile.researchSummary ??
             "Research spanning sustainable computing, AI infrastructure, and energy-aware systems design."}
         </p>
@@ -123,49 +113,21 @@ export default function PublicationsExplorer({
         resultCount={sortedPublications.length}
       />
 
-      <section className="space-y-5" aria-labelledby="selected-publications-heading">
-        <SectionHeader
-          id="selected-publications-heading"
-          title="Selected Publications"
-          description="A curated set of papers that reflects the core arc of the research agenda and recent collaborations."
-          count={selectedPublications.length}
-        />
-        {selectedPublications.length ? (
-          <div className="space-y-4">
-            {selectedPublications.map((publication) => (
-              <PublicationCard
-                key={`${publication.id}-selected`}
-                publication={publication}
-                highlightAuthor={profile.name}
-              />
-            ))}
-          </div>
-        ) : (
-          <p className="rounded-3xl border border-dashed border-(--border) px-5 py-6 text-sm text-(--muted-text)">
-            No selected publications match the current filters.
-          </p>
-        )}
-      </section>
-
-      <section className="space-y-5" aria-labelledby="full-publications-heading">
-        <SectionHeader
-          id="full-publications-heading"
-          eyebrow="Archive"
-          title="Full Publications"
-          description="Use search, filters, and sort controls to browse the full publication record by topic, venue, year, or publication type."
-          count={sortedPublications.length}
-        />
+      <section className="space-y-4 sm:space-y-5" aria-labelledby="full-publications-heading">
+        <h2 id="full-publications-heading" className="sr-only">
+          Publication list
+        </h2>
         {sortedPublications.length ? (
-          <div className="space-y-8">
+          <div className="space-y-4 sm:space-y-6">
             {Array.from(yearGroups.entries()).map(([groupYear, pubs]) => (
-              <div key={groupYear} className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <span className="shrink-0 text-sm font-semibold text-(--muted-text)">
+              <div key={groupYear} className="space-y-2.5 sm:space-y-3">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <span className="shrink-0 text-xs font-semibold text-(--muted-text) sm:text-sm">
                     {groupYear}
                   </span>
                   <div className="h-px flex-1 bg-(--border)" />
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-2.5 sm:space-y-3">
                   {pubs.map((publication) => (
                     <PublicationCard
                       key={publication.id}
