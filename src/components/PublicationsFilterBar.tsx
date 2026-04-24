@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 type PublicationsFilterBarProps = {
   search: string;
   onSearchChange: (value: string) => void;
@@ -47,6 +45,19 @@ function FilterSelect({
   );
 }
 
+function DisclosureIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      className="h-4 w-4 transition-transform duration-200 group-open:rotate-180"
+      aria-hidden
+    >
+      <path d="M8 10.94 2.53 5.47l1.06-1.06L8 8.82l4.41-4.41 1.06 1.06z" />
+    </svg>
+  );
+}
+
 export default function PublicationsFilterBar({
   search,
   onSearchChange,
@@ -60,36 +71,24 @@ export default function PublicationsFilterBar({
   typeOptions,
   resultCount,
 }: PublicationsFilterBarProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   return (
-    <section
-      className="space-y-3 sm:space-y-4 sm:rounded-[1.75rem] sm:border sm:border-(--border-soft) sm:bg-(--surface-raised) sm:p-6 sm:shadow-[0_10px_28px_rgba(15,23,42,0.04)]"
+    <details
+      className="group rounded-2xl border border-(--border-soft) bg-(--surface-raised) p-4 shadow-[0_10px_28px_rgba(15,23,42,0.04)] sm:rounded-[1.75rem] sm:p-6"
       aria-label="Publication filters"
     >
-      <div className="flex items-center justify-between gap-3 sm:hidden">
-        <p className="text-xs font-medium uppercase tracking-[0.14em] text-(--muted-text)">
-          {resultCount} papers
-        </p>
-        <button
-          type="button"
-          onClick={() => setIsExpanded((value) => !value)}
-          aria-expanded={isExpanded}
-          className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-(--border) text-(--muted-text) transition-colors hover:border-(--border-strong) hover:bg-(--surface-muted) hover:text-(--text)"
-        >
-          <svg
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            className={`h-4 w-4 transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}
-            aria-hidden
-          >
-            <path d="M8 10.94L2.53 5.47l1.06-1.06L8 8.82l4.41-4.41 1.06 1.06z" />
-          </svg>
-          <span className="sr-only">Toggle filters</span>
-        </button>
-      </div>
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+        <div>
+          <h2 className="text-lg! font-semibold text-(--text)">Search Publications</h2>
+          <p className="mt-1 text-sm text-(--muted-text)">
+            {resultCount} matching publications
+          </p>
+        </div>
+        <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-(--border) bg-(--surface) text-(--muted-text) transition-colors hover:border-(--border-strong) hover:bg-(--surface-muted) hover:text-(--text)">
+          <DisclosureIcon />
+        </span>
+      </summary>
 
-      <div className={`${isExpanded ? "block" : "hidden"} space-y-3 sm:block sm:space-y-4`}>
+      <div className="mt-4 space-y-3 sm:mt-5 sm:space-y-4">
         <label className="block space-y-2">
           <span className="text-xs font-semibold uppercase tracking-[0.14em] text-(--muted-text)">
             Search
@@ -143,11 +142,7 @@ export default function PublicationsFilterBar({
             ]}
           />
         </div>
-
-        <div className="hidden justify-end sm:flex">
-          <p className="text-sm text-(--muted-text)">{resultCount} matching publications</p>
-        </div>
       </div>
-    </section>
+    </details>
   );
 }

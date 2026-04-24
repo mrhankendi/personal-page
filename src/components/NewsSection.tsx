@@ -5,13 +5,19 @@ import type { NewsItem } from "@/lib/content";
 
 const INITIAL_COUNT = 3;
 
-export default function NewsSection({ items }: Readonly<{ items: NewsItem[] }>) {
+export default function NewsSection({
+  items,
+  showTitle = true,
+}: Readonly<{
+  items: NewsItem[];
+  showTitle?: boolean;
+}>) {
   const [showAll, setShowAll] = useState(false);
   const visible = showAll ? items : items.slice(0, INITIAL_COUNT);
 
   return (
     <section>
-      <h2 className="mb-4 text-(--text)">News</h2>
+      {showTitle ? <h2 className="mb-4 text-(--text)">News</h2> : null}
       <ul className="space-y-3">
         {visible.map((item) => (
           <li key={item.date + item.text} className="flex gap-2.5 text-sm">

@@ -96,9 +96,9 @@ export default function RootLayout({
         </header>
 
         <div className="mx-auto w-full max-w-6xl px-4">
-          <div className="flex gap-8 lg:gap-10">
+          <div className="flex flex-col gap-2 lg:flex-row lg:gap-10">
             <Sidebar />
-            <main className="min-w-0 flex-1 pb-16 pt-8 lg:pt-10">{children}</main>
+            <main className="min-w-0 flex-1 pb-16 pt-0 lg:pt-6">{children}</main>
           </div>
           <footer className="mt-12 border-t border-(--border) py-6">
             <div className="text-sm text-(--muted-text)">

@@ -90,13 +90,9 @@ export default function PublicationsExplorer({
   }, [sortedPublications]);
 
   return (
-    <div className="space-y-5 sm:space-y-8 lg:space-y-10">
-      <div className="space-y-2 sm:space-y-4">
-        <h1 className="text-2xl font-semibold text-(--text) sm:text-4xl">Publications</h1>
-        <p className="hidden max-w-3xl text-base leading-7 text-(--muted-text) sm:block">
-          {profile.researchSummary ??
-            "Research spanning sustainable computing, AI infrastructure, and energy-aware systems design."}
-        </p>
+    <div className="space-y-3 sm:space-y-5 lg:space-y-6">
+      <div>
+        <h1 className="text-2xl font-semibold text-(--text) sm:text-3xl">Publications</h1>
       </div>
 
       <PublicationsFilterBar
@@ -113,12 +109,12 @@ export default function PublicationsExplorer({
         resultCount={sortedPublications.length}
       />
 
-      <section className="space-y-4 sm:space-y-5" aria-labelledby="full-publications-heading">
+      <section className="space-y-3 sm:space-y-5" aria-labelledby="full-publications-heading">
         <h2 id="full-publications-heading" className="sr-only">
           Publication list
         </h2>
         {sortedPublications.length ? (
-          <div className="space-y-4 sm:space-y-6">
+          <div className="space-y-3 sm:space-y-6">
             {Array.from(yearGroups.entries()).map(([groupYear, pubs]) => (
               <div key={groupYear} className="space-y-2.5 sm:space-y-3">
                 <div className="flex items-center gap-3 sm:gap-4">
@@ -127,7 +123,7 @@ export default function PublicationsExplorer({
                   </span>
                   <div className="h-px flex-1 bg-(--border)" />
                 </div>
-                <div className="space-y-2.5 sm:space-y-3">
+                <div className="space-y-2 sm:space-y-3">
                   {pubs.map((publication) => (
                     <PublicationCard
                       key={publication.id}
