@@ -95,8 +95,8 @@ export default function Sidebar() {
   const p: Profile = getProfile();
 
   return (
-    <aside className="w-full shrink-0 pt-3 lg:sticky lg:top-16 lg:w-72 lg:self-start lg:border-r lg:border-(--border) lg:bg-(--surface) lg:py-8">
-      <div className="space-y-4 rounded-2xl border border-(--border) bg-(--surface-raised) p-4 shadow-[0_12px_30px_rgba(15,23,42,0.04)] lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:px-4 lg:shadow-none">
+    <aside className="w-full shrink-0 pt-3 lg:sticky lg:top-16 lg:w-72 lg:self-start lg:pt-6">
+      <div className="space-y-4 rounded-2xl border border-(--border) bg-(--surface-raised) p-4 shadow-[0_12px_30px_rgba(15,23,42,0.04)] lg:p-5">
         <div className="flex items-center gap-4 lg:flex-col lg:text-center">
           <img
             src={avatarPath}
@@ -153,74 +153,74 @@ export default function Sidebar() {
         ) : null}
 
         {p.social ? (
-          <ul className="flex gap-2 border-t border-(--border) pt-3 lg:hidden" aria-label="Profile links">
-            {mobileSocialKeys.map((key) => {
-              const url = p.social?.[key];
-              const meta = socialMeta[key];
-              if (!url) return null;
+          <>
+            {/* Mobile: icon row */}
+            <ul className="flex gap-2 border-t border-(--border) pt-3 lg:hidden" aria-label="Profile links">
+              {mobileSocialKeys.map((key) => {
+                const url = p.social?.[key];
+                const meta = socialMeta[key];
+                if (!url) return null;
 
-              return (
-                <li key={key}>
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={meta.label}
-                    title={meta.label}
-                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--border) bg-(--surface) text-(--muted-text) transition hover:-translate-y-0.5 hover:border-(--border-strong) hover:bg-(--surface-muted) hover:text-(--text)"
-                  >
-                    <SocialIcon name={key} />
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        ) : null}
-      </div>
-
-      {p.social ? (
-        <div className="mt-5 hidden px-4 lg:block">
-          <ul className="grid gap-2">
-            {Object.entries(p.social).map(([key, url]) => {
-              const meta = socialMeta[key] ?? {
-                label: formatSocialKey(key),
-                description: "External profile",
-                accent: "group-hover:text-(--text)",
-              };
-
-              return (
-                <li key={key}>
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={meta.label}
-                    className="group flex h-full items-center gap-3 rounded-2xl border border-(--border) bg-(--surface-raised) px-3 py-2.5 text-(--text) shadow-sm transition-all hover:-translate-y-0.5 hover:border-(--border-strong) hover:bg-(--surface-muted) hover:shadow-[0_10px_24px_rgba(15,23,42,0.08)]"
-                    title={meta.label}
-                  >
-                    <span
-                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-(--border) bg-(--surface) text-(--muted-text) transition-colors ${meta.accent}`}
+                return (
+                  <li key={key}>
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={meta.label}
+                      title={meta.label}
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--border) bg-(--surface) text-(--muted-text) transition hover:-translate-y-0.5 hover:border-(--border-strong) hover:bg-(--surface-muted) hover:text-(--text)"
                     >
                       <SocialIcon name={key} />
-                    </span>
-                    <span className="min-w-0 flex-1 text-left">
-                      <span className="block text-sm font-semibold leading-5 text-(--text)">
-                        {meta.label}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+
+            {/* Desktop: full link list inside the same card */}
+            <ul className="hidden border-t border-(--border) pt-3 lg:grid lg:gap-2">
+              {Object.entries(p.social).map(([key, url]) => {
+                const meta = socialMeta[key] ?? {
+                  label: formatSocialKey(key),
+                  description: "External profile",
+                  accent: "group-hover:text-(--text)",
+                };
+
+                return (
+                  <li key={key}>
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={meta.label}
+                      className="group flex h-full items-center gap-3 rounded-2xl border border-(--border) bg-(--surface) px-3 py-2.5 text-(--text) shadow-sm transition-all hover:-translate-y-0.5 hover:border-(--border-strong) hover:bg-(--surface-muted) hover:shadow-[0_10px_24px_rgba(15,23,42,0.08)]"
+                      title={meta.label}
+                    >
+                      <span
+                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-(--border) bg-(--surface-raised) text-(--muted-text) transition-colors ${meta.accent}`}
+                      >
+                        <SocialIcon name={key} />
                       </span>
-                      <span className="block text-xs leading-4 text-(--muted-text)">
-                        {meta.description}
+                      <span className="min-w-0 flex-1 text-left">
+                        <span className="block text-sm font-semibold leading-5 text-(--text)">
+                          {meta.label}
+                        </span>
+                        <span className="block text-xs leading-4 text-(--muted-text)">
+                          {meta.description}
+                        </span>
                       </span>
-                    </span>
-                    <span className="text-(--muted-text) opacity-60 transition group-hover:translate-x-0.5 group-hover:opacity-100">
-                      <ArrowIcon />
-                    </span>
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      ) : null}
+                      <span className="text-(--muted-text) opacity-60 transition group-hover:translate-x-0.5 group-hover:opacity-100">
+                        <ArrowIcon />
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </>
+        ) : null}
+      </div>
     </aside>
   );
 }

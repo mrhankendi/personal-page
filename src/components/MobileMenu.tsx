@@ -31,9 +31,9 @@ export default function MobileMenu() {
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 right-0 top-full z-40 border-b border-(--border) bg-(--surface)">
-          <nav className="px-4 py-4">
-            <ul className="space-y-2">
+        <div className="absolute left-0 right-0 top-full z-40 border-b border-(--border) bg-(--surface-raised) shadow-[0_8px_24px_rgba(15,23,42,0.10)] dark:shadow-[0_8px_24px_rgba(0,0,0,0.4)]">
+          <nav className="mx-auto max-w-6xl px-4 py-3">
+            <ul className="space-y-1">
               {navItems.map((item) => {
                 const isActive = pathname === item.href;
                 return (
@@ -42,10 +42,10 @@ export default function MobileMenu() {
                       href={item.href}
                       onClick={() => setIsOpen(false)}
                       className={
-                        "block rounded-md px-2 py-2 text-sm uppercase tracking-wide " +
+                        "flex items-center rounded-xl px-3 py-2.5 text-sm font-medium uppercase tracking-wide transition-colors " +
                         (isActive
-                          ? "bg-(--surface-muted) ring-1 ring-(--border)"
-                          : "hover:bg-(--surface-muted)")
+                          ? "bg-(--surface-muted) text-(--text) ring-1 ring-(--border)"
+                          : "text-(--muted-text) hover:bg-(--surface-muted) hover:text-(--text)")
                       }
                     >
                       {item.label}

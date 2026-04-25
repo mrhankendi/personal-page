@@ -1,4 +1,5 @@
 import { getEducation } from "@/lib/content";
+import CollapsibleDetails from "@/components/CollapsibleDetails";
 
 function DisclosureIcon() {
   return (
@@ -17,7 +18,7 @@ export default function EducationList() {
   const entries = getEducation();
 
   return (
-    <details className="group" open>
+    <CollapsibleDetails className="group">
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
         <h2 className="m-0 text-(--text)">Education</h2>
         <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-(--border) bg-(--surface) transition-colors hover:border-(--border-strong) hover:bg-(--surface-muted)">
@@ -42,6 +43,6 @@ export default function EducationList() {
           </div>
         ))}
       </div>
-    </details>
+    </CollapsibleDetails>
   );
 }

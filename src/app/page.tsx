@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import type { ReactNode } from "react";
 import Link from "next/link";
+import CollapsibleDetails from "@/components/CollapsibleDetails";
 import { getPublications, getNews, getSummary } from "@/lib/content";
 import NewsSection from "@/components/NewsSection";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
@@ -64,9 +65,8 @@ function CollapsiblePanel({
   action?: ReactNode;
 }>) {
   return (
-    <details
+    <CollapsibleDetails
       className="group rounded-2xl border border-(--border) bg-(--surface-raised) p-4 shadow-[0_12px_30px_rgba(15,23,42,0.04)] sm:p-6"
-      open
     >
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
         <h2 className="m-0 text-(--text)">{title}</h2>
@@ -78,7 +78,7 @@ function CollapsiblePanel({
         </span>
       </summary>
       <div className="mt-4 sm:mt-5">{children}</div>
-    </details>
+    </CollapsibleDetails>
   );
 }
 

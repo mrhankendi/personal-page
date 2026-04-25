@@ -5,7 +5,7 @@ import Link from "next/link";
 import "./globals.css";
 import MainNav from "../components/MainNav";
 import MobileMenu from "../components/MobileMenu";
-import Sidebar from "../components/Sidebar";
+import SidebarWrapper from "../components/SidebarWrapper";
 import ThemeToggle from "../components/ThemeToggle";
 
 const inter = Inter({
@@ -82,7 +82,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${geistMono.variable} ${display.variable} bg-(--surface) font-sans text-(--text) antialiased`}
       >
-        <header className="sticky inset-x-0 top-0 z-50 h-16 border-b border-(--border)/80 bg-(--surface)/80 backdrop-blur-md shadow-sm">
+        <header className="sticky inset-x-0 top-0 z-50 h-16 border-b border-(--border) bg-(--surface-raised)/95 backdrop-blur-md shadow-[0_2px_12px_rgba(15,23,42,0.07)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.3)]">
           <nav className="mx-auto flex h-full max-w-6xl items-center justify-between px-4">
             <Link href="/" className="font-display text-lg font-semibold tracking-wide text-(--text)">
               Can Hankendi
@@ -97,7 +97,7 @@ export default function RootLayout({
 
         <div className="mx-auto w-full max-w-6xl px-4">
           <div className="flex flex-col gap-2 lg:flex-row lg:gap-10">
-            <Sidebar />
+            <SidebarWrapper />
             <main className="min-w-0 flex-1 pb-16 pt-0 lg:pt-6">{children}</main>
           </div>
           <footer className="mt-12 border-t border-(--border) py-6">
