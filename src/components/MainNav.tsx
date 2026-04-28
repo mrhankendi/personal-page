@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/publications", label: "Publications" },
+  { href: "/articles", label: "Articles" },
 ];
 
 export default function MainNav() {
@@ -14,7 +15,10 @@ export default function MainNav() {
   return (
     <ul className="main-nav hidden items-center gap-1 text-sm uppercase tracking-wide lg:flex">
       {navItems.map((item) => {
-        const isActive = pathname === item.href;
+        const isActive =
+          item.href === "/"
+            ? pathname === item.href
+            : pathname.startsWith(item.href);
         return (
           <li key={item.href}>
             <Link

@@ -49,7 +49,11 @@ export type Post = {
   title: string;
   date: string;
   summary?: string;
-  content?: string; // simple markdown/plaintext
+  content?: string;
+  paperPdf?: string; // link to the original paper PDF
+  authors?: string;
+  year?: number;
+  venue?: string;
 };
 
 export type Profile = {

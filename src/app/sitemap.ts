@@ -13,11 +13,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/publications/`, lastModified: now },
     { url: `${base}/talks/`, lastModified: now },
     { url: `${base}/teaching/`, lastModified: now },
-    { url: `${base}/blog/`, lastModified: now },
+    { url: `${base}/articles/`, lastModified: now },
   ];
 
   const posts = getPosts().map((p) => ({
-    url: `${base}/blog/${p.slug}/`,
+    url: `${base}/articles/${p.slug}/`,
     lastModified: p.date ?? now,
   }));
 

@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/publications", label: "Publications" },
+  { href: "/articles", label: "Articles" },
 ];
 
 export default function MobileMenu() {
@@ -35,7 +36,10 @@ export default function MobileMenu() {
           <nav className="mx-auto max-w-6xl px-4 py-3">
             <ul className="space-y-1">
               {navItems.map((item) => {
-                const isActive = pathname === item.href;
+                const isActive =
+                  item.href === "/"
+                    ? pathname === item.href
+                    : pathname.startsWith(item.href);
                 return (
                   <li key={item.href}>
                     <Link
