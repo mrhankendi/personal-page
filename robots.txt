@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://www.hankendi.com
+Sitemap: https://www.hankendi.com/sitemap.xml
